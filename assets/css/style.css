@@ -1,1 +1,71 @@
 /*Alarm Clock style*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+
+body {
+    background-color: #ffc03d;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.alarm-container {
+    width: 414px;
+    height: 600px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    /*margin: auto;*/
+}
+
+.app-name {
+    text-align: center;
+    
+    margin-top: 0px;
+}
+
+.alarm-container__instance {
+    display: flex;
+    justify-content: space-around;
+}
+
+.alarm-container__record {
+    width: 200px;
+    height: 200px;
+    background-color: #ffc03d;
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alarm-pill {
+    width: 50px;
+    height: 100px;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    padding: 4px;
+    align-self: center;
+}
+
+.alarm-pill__slider {
+    background-color: #ffc03d;
+    width: auto;
+    height: 50%;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1px;
+}
+
+.bottom-nav {
+    background-color: #573f46;
+    height: 100px;
+    margin: auto -20px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}

@@ -59,6 +59,27 @@ body {
     padding: 1px;
 }
 
+.Add-button{
+    display: flex;
+    justify-content: space-evenly;
+}
+.bt-add{
+    background-color: #ffc03d;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    margin-top: 5px;
+    font-size: 30px;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+}
+.bt-add:hover{
+    background-color: #faebd7;
+    color: black;
+}
+
 .bottom-nav {
     background-color: #573f46;
     height: 100px;
@@ -68,4 +89,33 @@ body {
     width: 100%;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+}
+
+.bottom-nav-icons{
+    color: grey;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    font-size: 28px;
+}
+
+ion-icon[name="alarm-outline"]{
+    color: #ffc03d;
+}
+ion-icon[name="time-outline"]:hover{
+color: #ffc03d
+}
+ion-icon[name="bed-outline"]:hover{
+color: #ffc03d;
+}
+ion-icon[name="stopwatch-outline"]:hover{
+color: #ffc03d;
+}
+.horizontal{
+    border-color: grey;
+    background-color: transparent;
+    border-style: solid;
+    width: 95px;
+
+    margin-top: 40px;
 }

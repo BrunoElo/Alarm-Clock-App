@@ -105,17 +105,11 @@ ion-icon[name="alarm-outline"]{
 ion-icon[name="time-outline"]:hover{
 color: #ffc03d
 }
+
 ion-icon[name="bed-outline"]:hover{
 color: #ffc03d;
 }
+
 ion-icon[name="stopwatch-outline"]:hover{
 color: #ffc03d;
-}
-.horizontal{
-    border-color: grey;
-    background-color: transparent;
-    border-style: solid;
-    width: 95px;
-
-    margin-top: 40px;
 }

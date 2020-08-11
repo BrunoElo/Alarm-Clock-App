@@ -10,7 +10,7 @@ body {
 
 .alarm-container {
     width: 414px;
-    height: 600px;
+    height: 500px;
     background-color: white;
     border-radius: 30px;
     padding: 20px;
@@ -19,15 +19,44 @@ body {
     /*margin: auto;*/
 }
 
+/* .alarm-wrapper {
+    overflow: scroll;
+    height: 500px;
+} */
+
 .app-name {
     text-align: center;
     
     margin-top: 0px;
 }
 
+.clock {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.current-date {
+ align-self: center;
+}
+
+.current-time {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.alarm-time__input {
+    background-color: #faebd7;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    margin: auto;
+}
+
 .alarm-container__instance {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .alarm-container__record {
@@ -39,6 +68,7 @@ body {
     border-radius: 30px;
     box-sizing: border-box;
     box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 .alarm-pill {
@@ -57,6 +87,32 @@ body {
     border-radius: 50%;
     text-align: center;
     padding: 1px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.alarm__duration, .current-date {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.alarm__time{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 0px;
+    margin-top: 40px;
+    margin-bottom: -30px;
+    z-index: 2;
+    position: relative;
+}
+
+.alarm__meridian {
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 0px;
+    color: rgba(255, 255, 255, 0.479);
+    margin-top: 60px;
+    margin-bottom: 0px;
 }
 
 .Add-button{
@@ -78,6 +134,7 @@ body {
 .bt-add:hover{
     background-color: #faebd7;
     color: black;
+    cursor: pointer;
 }
 
 .bottom-nav {
@@ -89,6 +146,7 @@ body {
     width: 100%;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    z-index: 5
 }
 
 .bottom-nav-icons{
@@ -97,19 +155,24 @@ body {
     justify-content: space-around;
     margin-top: 8px;
     font-size: 28px;
+    
 }
 
 ion-icon[name="alarm-outline"]{
     color: #ffc03d;
+    cursor: pointer;
 }
 ion-icon[name="time-outline"]:hover{
-color: #ffc03d
+    color: #ffc03d;
+    cursor: pointer;
 }
 
 ion-icon[name="bed-outline"]:hover{
-color: #ffc03d;
+    color: #ffc03d;
+    cursor: pointer;
 }
 
 ion-icon[name="stopwatch-outline"]:hover{
-color: #ffc03d;
+    color: #ffc03d;
+    cursor: pointer;
 }

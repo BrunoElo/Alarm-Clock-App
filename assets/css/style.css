@@ -9,20 +9,25 @@ body {
 }
 
 .alarm-container {
-    width: 414px;
     height: 500px;
     background-color: white;
     border-radius: 30px;
     padding: 20px;
     margin: 20px;
     position: relative;
-    /*margin: auto;*/
+    
 }
 
-/* .alarm-wrapper {
-    overflow: scroll;
-    height: 500px;
+/*.alarm-wrapper {
+     overflow: scroll;
 } */
+
+@media screen and (min-width: 768px) {
+    .alarm-container {
+        width: 414px;
+        margin: 30px auto;
+    }
+}
 
 .app-name {
     text-align: center;
@@ -39,12 +44,13 @@ body {
  align-self: center;
 }
 
-.current-time {
+.current-time, .show-timer {
     font-weight: 700;
     font-size: 48px;
+    text-align: center;
 }
 
-.alarm-time__input {
+.alarm-time__input, .timer__input {
     background-color: #faebd7;
     border: none;
     border-radius: 5px;
@@ -113,6 +119,23 @@ body {
     color: rgba(255, 255, 255, 0.479);
     margin-top: 60px;
     margin-bottom: 0px;
+}
+
+.show-timer {
+    margin-bottom: 20px;
+}
+
+.timer-set__btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    padding: 8px;
+    margin: 20px auto;
+    display: block;
+    background-color: #ffc03d;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #573f4644;
+    cursor: pointer;
 }
 
 .Add-button{

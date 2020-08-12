@@ -1,19 +1,9 @@
-//Alarm Clock functionality
-
-let onBtn = document.querySelectorAll('.alarm-pill__slider');
-onBtn[0].addEventListener('click', slide)
-
-function slide() {
-
-}
-
-
+ // Alarm Clock functionality
 let currentTime = document.querySelector('.current-time');
 let currentDay = document.querySelector('.current-date');
 
 
-
-// function for showing current time
+// Function for showing current time
 function displayTime() {
     let now = new Date();
     let h = now.getHours();
@@ -32,7 +22,7 @@ function displayTime() {
     setTimeout(displayTime, 500);
 }
 
-// add zero in front of numbers < 10
+// Add zero in front of numbers < 10
 function doubleDigit(t) {
     if (t < 10) {
         t = "0" + t
@@ -40,13 +30,13 @@ function doubleDigit(t) {
     return t;
 }
 
-// function for seting alarm
+// Function for seting alarm
 function setAlarm() {
     let alarmTimeInput = document.querySelector('.alarm-time__input').value;
     let alarmTime = document.querySelector('.alarm__time');
     let timePeriod = document.querySelector('.alarm__meridian');
     let alarmDate = document.querySelector('.alarm__duration');
-    //console.log(alarm);
+    // console.log(alarm);
     let alarm = new Date(alarmTimeInput);
     let currentDate = new Date();
 
@@ -63,7 +53,7 @@ function setAlarm() {
         h = h - 12;
     }
     alarmTime.innerHTML = h + ':' + m;
-    // To get dynamic meridien
+    // To get dynamic meridian
     let timestamp = alarm.toLocaleTimeString();
     let meridian = timestamp.slice(-2);
     console.log(meridian);
@@ -88,5 +78,70 @@ function setAlarm() {
         }, timeDiff);
 
     }
+} 
+
+// Timer functionality
+let countDownTimer = document.querySelector('.show-timer');
+let appName = document.querySelector('.app-name');
+let timerfeature = document.querySelector('.timer-container');
+let alarmfeature = document.querySelector('.alarm-wrapper');
+
+
+ function showTimer() {
+    alarmfeature.style.display = 'none';
+    timerfeature.style.display = 'block'
+   appName.innerHTML = 'Timer';
+   console.log('fire');
+} 
+
+function showAlarm() {
+    alarmfeature.style.display = 'block';
+    timerfeature.style.display = 'none'
+   appName.innerHTML = 'Alarm Clock';
+} 
+
+
+
+
+function startTimer() {
+
+    // Updates the display every 1 second
+    setInterval(() => {
+        workingTimer()
+    }, 1000);
+    
 }
+
+function workingTimer() {
+
+
+    let timerInput = document.querySelector('.timer__input').value;
+
+    // Set the date to countdown to
+    let countDownDate = new Date(timerInput).getTime();
+
+    // Set the date to countdown from
+    let timeNow = new Date(/* timerInput */).getTime();
+    //console.log(timerInput);
+
+    let timerDiff = countDownDate - timeNow;
+
+    // Time calculation for days, hours, minutes and seconds
+    //var days = Math.floor(timerDiff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timerDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timerDiff % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timerDiff % (1000 * 60)) / (1000));
+    minutes = doubleDigit(minutes);
+    seconds = doubleDigit(seconds);
+
+
+    countDownTimer.innerHTML = hours + ':' + minutes + ':' + seconds;
+
+    if (timerDiff < 0) {
+        clearInterval();
+        countDownTimer.innerHTML = "Time Up!";
+    }
+
+}
+
 

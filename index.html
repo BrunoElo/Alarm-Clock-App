@@ -15,12 +15,12 @@
     <div class="alarm-container">
         <h1 class="app-name">Alarm Clock</h1>
         <div class="alarm-wrapper">
-
+            
             <div class="clock">
                 <div class="current-date"></div>
                 <span class="current-time"></span>
             </div>
-           
+
 
             <div class="alarm-container__instance">
                 <div class="alarm-container__record">
@@ -36,7 +36,9 @@
             </div>
 
             <input class="alarm-time__input" type="datetime-local">
-<!--
+            
+            <!--
+    More alarms to be added when the add button is clicked
             <div class="alarm-container__instance">
                 <div class="alarm-container__record">
                     <p class="alarm__duration">Everyday</p>
@@ -60,8 +62,25 @@
                         <p>OFF</p>
                     </div>
                 </div>
-            </div>-->
-        </div>
+            </div>
+-->
+</div>
+
+            <!--Timer-->
+            <div class="timer-container" style="display: none;">
+                <div class="show-timer">00:00:00</div>
+                <input class="timer__input" type="datetime-local">
+                <button onclick="startTimer();" class="timer-set__btn">Start</button>
+            </div>
+
+        
+
+
+
+
+
+
+
 
         <div class="bottom-nav">
             <div class="Add-button">
@@ -73,11 +92,11 @@
             <div class="bottom-nav-icons">
                 <ion-icon name="time-outline"></ion-icon>
 
-                <ion-icon name="alarm-outline"></ion-icon>
+                <ion-icon class="alarm-btn" onclick="showAlarm();" name="alarm-outline"></ion-icon>
 
                 <ion-icon name="bed-outline"></ion-icon>
 
-                <ion-icon name="stopwatch-outline"></ion-icon>
+                <ion-icon class="timer-btn" onclick="showTimer();" name="stopwatch-outline"></ion-icon>
             </div>
 
 

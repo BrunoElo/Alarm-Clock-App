@@ -46,11 +46,20 @@ body {
 
 .current-time, .show-timer {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 44px;
     text-align: center;
 }
 
-.alarm-time__input, .timer__input {
+.clock-meridian {
+    font-weight: 700;
+    color: #ffc03d;
+}
+
+.digital-clock {
+    display: flex;
+}
+
+.alarm-time__input /*, .timer__input */ {
     background-color: #faebd7;
     border: none;
     border-radius: 5px;
@@ -125,9 +134,27 @@ body {
     margin-bottom: 20px;
 }
 
-.timer-set__btn {
+.timer__inputs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.timer__hr, .timer__min, .timer__sec {
+    width: 20%;
+    height: 20px;
+    background-color: #faebd7;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
     font-family: 'Raleway', sans-serif;
-    font-size: 24px;
+
+}
+
+.timer-set__btn, .timer-reset__btn, .timer-pause__btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
     padding: 8px;
     margin: 20px auto;
     display: block;

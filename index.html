@@ -14,11 +14,14 @@
 <body onload="displayTime();">
     <div class="alarm-container">
         <h1 class="app-name">Alarm Clock</h1>
+        <!-- alarm start-->
         <div class="alarm-wrapper">
-            
+
             <div class="clock">
                 <div class="current-date"></div>
-                <span class="current-time"></span>
+                <div class="digital-clock">
+                    <span class="current-time"></span>
+                    <span class="clock-meridian"></span></div>
             </div>
 
 
@@ -36,7 +39,7 @@
             </div>
 
             <input class="alarm-time__input" type="datetime-local">
-            
+
             <!--
     More alarms to be added when the add button is clicked
             <div class="alarm-container__instance">
@@ -64,23 +67,26 @@
                 </div>
             </div>
 -->
-</div>
-
-            <!--Timer-->
-            <div class="timer-container" style="display: none;">
-                <div class="show-timer">00:00:00</div>
-                <input class="timer__input" type="datetime-local">
-                <button onclick="startTimer();" class="timer-set__btn">Start</button>
+        </div>
+        <!-- alarm start-->
+        <!--timer start-->
+        <div class="timer-container" style="display: none;">
+            <div class="show-timer">00:00:00</div>
+            <div class="timer__inputs">
+                <input type="number" class="timer__hr" placeholder="hours">
+                <input type="number" class="timer__min" placeholder="minutes">
+                <input type="number" class="timer__sec" placeholder="seconds">
             </div>
+            <div class="timer__inputs">
+                <button onclick="startTimer();" class="timer-set__btn">Start</button>
+                <button onclick="resetTimer();" class="timer-reset__btn">Reset</button>
+                <button onclick="pauseTimer();" class="timer-pause__btn">Pause</button>
+            </div>
+        </div>
+        <!--timer end-->
 
-        
 
-
-
-
-
-
-
+        <!--bottom nav start-->
 
         <div class="bottom-nav">
             <div class="Add-button">
@@ -101,6 +107,7 @@
 
 
         </div>
+        <!--bottom nav end-->
     </div>
 
 

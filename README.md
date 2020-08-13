@@ -1,5 +1,5 @@
 # Alarm-Clock-App
-An alarm clock web application with a timer feature
+An alarm clock web application with a timer feature.
   
   ### Repo setup
 
@@ -54,4 +54,7 @@ When making a PR, your PR is expected to have useful information like the follow
 ● Any background contexts ? (maybe something a tester might not notice and be useful for testing)
 
 ● Screenshots
+<hr>
 
+### Potential additional features
+- Instantly adding more alarms and timers at the click of the 'plus' button.
